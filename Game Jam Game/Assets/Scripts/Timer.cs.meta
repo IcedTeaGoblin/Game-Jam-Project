@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ef58750e4128d34ab3ab2ea10d6ada0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CollectableCoffee: {fileID: 2473055995048326501, guid: d3a075c52b6cd8147b6f6f116c29122a,
+      type: 3}
+  - CollectableTea: {fileID: 2217392298888393576, guid: db87b5b91e6262c4ebf102db3f02de94,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

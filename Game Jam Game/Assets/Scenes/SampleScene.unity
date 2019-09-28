@@ -349,8 +349,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1209187014}
   - component: {fileID: 1209187013}
+  - component: {fileID: 1209187018}
   - component: {fileID: 1209187012}
   - component: {fileID: 1209187016}
+  - component: {fileID: 1209187015}
+  - component: {fileID: 1209187017}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -442,6 +445,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1209187015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209187011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 124948c36517ef347a817e9305aa7bec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1209187016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +476,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac662c6c3e48f842903cb5169c5d1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coffee: {fileID: 2473055995048326500, guid: d3a075c52b6cd8147b6f6f116c29122a, type: 3}
+  tea: {fileID: 4867818109315548863, guid: db87b5b91e6262c4ebf102db3f02de94, type: 3}
+--- !u!61 &1209187017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209187011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18875885, y: -0.97077274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6113358, y: 2.2338161}
+  m_EdgeRadius: 0
+--- !u!114 &1209187018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209187011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b80a40137738dc46aade319efd72f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coffee: {fileID: 0}
+  tea: {fileID: 0}
 --- !u!1 &1318097760
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +580,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTimer: 5
-  Collectable: {fileID: 2473055995048326501, guid: d3a075c52b6cd8147b6f6f116c29122a,
+  CollectableCoffee: {fileID: 2473055995048326501, guid: d3a075c52b6cd8147b6f6f116c29122a,
+    type: 3}
+  CollectableTea: {fileID: 2217392298888393576, guid: db87b5b91e6262c4ebf102db3f02de94,
     type: 3}
 --- !u!4 &1677323440
 Transform:

@@ -6,6 +6,10 @@ public class Player_Main_Script : MonoBehaviour
 {
     private float y_movement;
     private float x_movement;
+    private float movementMultiplier = 1.0f;
+
+    public GameObject coffee;
+    public GameObject tea;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +25,11 @@ public class Player_Main_Script : MonoBehaviour
         ///Movement input
         if (Input.GetKey(KeyCode.A))
         {
-            x_movement = -0.100f;
+            x_movement = -0.200f * movementMultiplier;
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            x_movement = 0.100f;
+            x_movement = 0.200f * movementMultiplier;
         }
         else
         {
@@ -34,16 +38,33 @@ public class Player_Main_Script : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            y_movement = 0.050f;
+            y_movement = 0.10f * movementMultiplier;
         }
         else if(Input.GetKey(KeyCode.S))
         {
-            y_movement = -0.050f;
+            y_movement = -0.10f * movementMultiplier;
         }
         else
         {
             y_movement = 0.000f;
         }
+
+        ///Screen Boundries
+
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name.Equals("CollectableCoffee(Clone)"))
+        {
+            movementMultiplier += 0.1f;
+            Destroy(other.gameObject);
+        }
+
+        else if (other.gameObject.name.Equals("CollectableTea(Clone)"))
+        {
+            movementMultiplier -= 0.1f;
+            Destroy(other.gameObject);
+        }
+    }
 }

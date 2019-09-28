@@ -11,7 +11,8 @@ public class Timer : MonoBehaviour
     private bool canCount = true;
     private bool doOnce = false;
 
-    public Rigidbody2D Collectable;
+    public Rigidbody2D CollectableCoffee;
+    public Rigidbody2D CollectableTea;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,15 @@ public class Timer : MonoBehaviour
             timer = 0.0f;
 
             ///Create an Object
-            Instantiate(Collectable, new Vector3(Random.Range(-14.0f, 14.0f), 6.0f, 0.0f), Quaternion.identity);
-
+            int randomObject = Random.Range(1, 3);
+            if (randomObject == 1)
+            {
+                Instantiate(CollectableCoffee, new Vector3(Random.Range(-14.0f, 14.0f), 6.0f, 0.0f), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(CollectableTea, new Vector3(Random.Range(-14.0f, 14.0f), 6.0f, 0.0f), Quaternion.identity);
+            }
             timerReset();
         }
     }
