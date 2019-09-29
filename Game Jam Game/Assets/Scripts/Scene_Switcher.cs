@@ -19,4 +19,8 @@ public class Scene_Switcher : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void GettoContext()
+    {
+        SceneManager.LoadScene("ContextScreen");
+    }
 }
